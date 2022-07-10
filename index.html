@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-pink-400">
+    <nav class="p-5 bg-white shadow md:flex md:center md:justify-between">
+        <div class="flex justify-between items-center">
+            <a href="#">
+            <span class="semibold  flex text-lg">
+              
+                 <img class="w-10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="">
+               NavResponsive
+              
+            </span>
+        </a>
+
+             <!-- Hamburger Icon -->
+        <button
+        id="menu-btn"
+        class="block hamburger md:hidden focus:outline-none"
+      >
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+        </div>
+
+        <ul id="menu" class="md:flex md:items-center space-x-4 space-y-4 md:space-y-0 md:z-auto z-[-1] md:static absolute bg-white w-full left-0 md:w-auto py-4 md:py-0 pl-7 md:pl-0 md:opacity-100 opacity-0  top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-4"><a href="" class="text-lg hover:text-cyan-500 duration-500">HOME</a></li>
+            <li><a href="" class="text-lg hover:text-cyan-500 duration-500">SERVICE</a></li>
+            <li><a href="" class="text-lg hover:text-cyan-500 duration-500">ABOUT</a></li>
+            <li><a href="" class="text-lg hover:text-cyan-500 duration-500">CONTACT</a></li>
+            <li><a href="" class="text-lg hover:text-cyan-500 duration-500">BLOG</a></li>
+
+            <button class="bg-cyan-400 text-white text-lg rounded font-[poppins] px-6 py-2 mx-4 duration-500  hover:bg-cyan-600">Get Started</button>
+        </ul> 
+        
+        
+    </nav>
+  
+    <script>
+       const btn = document.getElementById('menu-btn');
+ 
+       const menu=document.getElementById('menu');
+
+       btn.addEventListener('click',()=>{
+        console.log('hi')
+        btn.classList.toggle('open')
+        menu.classList.toggle('top-[80px]')
+        menu.classList.add('opacity-100')
+       })
+
+       
+    </script>
+</body>
+</html>
